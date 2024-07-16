@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Web Design</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- You should have a page title in an h1 element with an id of title
     You should have a short explanation in a p element with an id of description
     You should have a form element with an id of survey-form
@@ -23,53 +23,94 @@
     Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
     Inside the form element, you are presented with a textarea for additional comments
     Inside the form element, you are presented with a button with id of submit to submit all the inputs -->
-    
+
     <h1 id="title">Developer Survey Form</h1>
-    <p id="description">Thank you for taking the time to help us improve the Developer Survey.</p>
+    <p id="description">
+      Thank you for taking the time to help us improve the Developer Survey.
+    </p>
     <button id="openDialog">Open Dialog</button>
     <dialog id="myDialog">
-    <form id="survey-form">
-            <label id="name-label" for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
-            <label id="email-label" for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
-            <label id="number-label" for="age">Your age <i>(working age from 18 to 60 years)</i>:</label>
-            <input type="number" id="age" name="age" min="18" max="60" required placeholder="Age">
-            <label for="dropdown">Which option best describes your current role?:</label>
-  <select id="dropdown" name="dropdown">
-    <option value="option1">Frontend Developer</option>
-    <option value="option2">Backend Developer</option>
-    <option value="option3">Full Stack Developer</option>
-  </select>
-  <label for="radio">What is your favorite technology?:</label>
-  <label>
-    <input type="radio" name="options" value="html"> HTML
-  </label><br>
-  <label>
-    <input type="radio" name="options" value="css"> CSS
-  </label><br>
-  <label>
-    <input type="radio" name="options" value="JS"> JS
-  </label><br>
-  <label>
-    <input type="radio" name="options" value="node"> NodeJS
-  </label><br>
-  <button type="submit">Submit</button>
-        </form>
-        <button id="closeDialog">Close</button>
+      <form id="survey-form">
+        <label id="name-label" for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+        />
+        <label id="email-label" for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+        />
+        <label id="number-label" for="age"
+          >Your age <i>(working age from 18 to 60 years)</i>:</label
+        >
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="18"
+          max="60"
+          required
+          placeholder="Age"
+        />
+        <label for="dropdown"
+          >Which option best describes your current role?:</label
+        >
+        <select id="dropdown" name="dropdown">
+          <option value="option1">Frontend Developer</option>
+          <option value="option2">Backend Developer</option>
+          <option value="option3">Full Stack Developer</option>
+        </select>
+        <!----------- radio btns ------------>
+        <label for="radio">What is your favorite technology?:</label>
+        <label> <input type="radio" name="options" value="html" /> HTML </label
+        ><br />
+        <label> <input type="radio" name="options" value="css" /> CSS </label
+        ><br />
+        <label> <input type="radio" name="options" value="JS" /> JS </label
+        ><br />
+        <label>
+          <input type="radio" name="options" value="node" /> NodeJS </label
+        ><br />
+        <!------------- checkbox  ------------>
+        <label for="checkbox">What is your favorite working format?:</label>
+        <label>
+          <input type="checkbox" name="field1" value="single" /> Individual
+          work</label
+        ><br />
+        <label>
+          <input type="checkbox" name="field2" value="small group" /> Small
+          group (2-4 people) </label
+        ><br />
+        <label>
+          <input type="checkbox" name="field3" value="team" /> Team work (5-25
+          people)</label
+        ><br />
+        <!------------- textarea  ------------>
+        <label for="comments">Additional comments:</label><br />
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea
+        ><br />
+
+        <button id="submit" type="submit">Submit</button>
+      </form>
+      <button id="closeDialog">Close</button>
     </dialog>
     <script>
-        const dialog = document.getElementById('myDialog');
-        const openDialogButton = document.getElementById('openDialog');
-        const closeDialogButton = document.getElementById('closeDialog');
-    
-        openDialogButton.addEventListener('click', () => {
-          dialog.showModal();
-        });
-    
-        closeDialogButton.addEventListener('click', () => {
-          dialog.close();
-        });
-      </script>
-</body>
+      const dialog = document.getElementById("myDialog");
+      const openDialogButton = document.getElementById("openDialog");
+      const closeDialogButton = document.getElementById("closeDialog");
+
+      openDialogButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      closeDialogButton.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
+  </body>
 </html>
